@@ -165,11 +165,7 @@ void setup() {
 }
 
 void loop() {	
-  	XYscope.plotStart();
-	//Dashed Line, Left & Right
-	for (int i = 0; i < 4095; i = i + 256) {
-		XYscope.plotLine(0, i, 0, i + 127);	//Dashed line at Left Side of Screen
-		XYscope.plotLine(4095, i + 128, 4095, i + 255);	//Dashed Line at Right Side of Screen
-	}
+
+  XYscope.print((char *)"Arduino Graphics Interface", false);
 	Serial.println(" DONE PeakToPeak_Horiz Sq Wave ");
 }
